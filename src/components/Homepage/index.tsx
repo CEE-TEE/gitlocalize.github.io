@@ -6,7 +6,7 @@ import clsx from "clsx";
 import Button from "@site/src/shared/Button";
 import Select from "@site/src/shared/Select";
 import SelectItem from "@site/src/shared/Select/SelectItem";
-import {useAuthorization} from "@site/src/hooks/useAuthorization";
+import {AuthorizationContext} from "@site/src/contexts/Authorization";
 
 function UserPanel({user}): JSX.Element {
     const {userName, avatar} = user || {};
@@ -29,7 +29,7 @@ function UserPanel({user}): JSX.Element {
 }
 
 export default function Homepage(): JSX.Element {
-    const [authenticated, user] = useAuthorization();
+    const authorization = useContext(AuthorizationContext);
 
     return (
         <div className="homepage">
@@ -49,8 +49,8 @@ export default function Homepage(): JSX.Element {
                         </div>
                     </div>
                     <div className="homepage__flex">
-                        {(authenticated)
-                            ? (<UserPanel user={user}/>)
+                        {(authorization.token)
+                            ? (<UserPanel user={authorization.user}/>)
                             : (<Button className="auth-button" href="https://gitlocalize.com/auth/grant">Sign in with GitHub</Button>)}
                     </div>
                 </div>
@@ -63,7 +63,7 @@ export default function Homepage(): JSX.Element {
                         <div className="main__description">A better process to translate products, {/*<br/>*/}
                             documentation or websites</div>
                         <div className="main__actions">
-                            {!authenticated && <Button className="github-button" href="https://gitlocalize.com/auth/grant">Get started with GitHub</Button>}
+                            {!authorization.token && <Button className="github-button" href="https://gitlocalize.com/auth/grant">Get started with GitHub</Button>}
                             <Button className="demo-button" href="#demo">Watch a Demo</Button>
                         </div>
                     </div>
@@ -220,7 +220,7 @@ export default function Homepage(): JSX.Element {
                 <div className="homepage__container--adaptive">
                     <div className="homepage__flex flex-l-10 flex-m-10 flex-s-10">
                         <div className="enjoy__title">Enjoy a Better Procees of Localization</div>
-                        {!authenticated && <Button className="github-button enjoy__button" href="https://gitlocalize.com/auth/grant">Get started with GitHub</Button>}
+                        {!authorization.token && <Button className="github-button enjoy__button" href="https://gitlocalize.com/auth/grant">Get started with GitHub</Button>}
                     </div>
                 </div>
             </div>
@@ -253,7 +253,6 @@ export default function Homepage(): JSX.Element {
                                 <div className="footer__menu footer__company">
                                     <div className="footer__menu-title">Company</div>
                                     <div className="footer__menu-items">
-                                        <a className="footer__menu-item" href="#about">About Us</a>
                                         <a className="footer__menu-item" href="https://gitlocalize.com/terms">Terms of Service</a>
                                         <a className="footer__menu-item" href="https://gitlocalize.com/privacy">Privacy Policy</a>
                                     </div>

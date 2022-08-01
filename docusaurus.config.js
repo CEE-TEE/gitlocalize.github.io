@@ -27,6 +27,13 @@ const config = {
     locales: ['en','ja','ru'],
   },
 
+  plugins: [
+    './src/extensions/docusaurus-plugin-example'
+  ],
+  clientModules: [
+    './src/extensions/client-module-example'
+  ],
+
   presets: [
     [
       'classic',
