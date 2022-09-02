@@ -143,7 +143,7 @@
     letter-spacing: 0.1px;
     line-height: 32px;
     margin-bottom: 59px;
-    width: 350px;
+    width: 400px;
 }
 .main__app-img {
     align-self: flex-end;
@@ -336,7 +336,7 @@
     font-weight: 300;
     letter-spacing: 0;
     line-height: 27px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 54px;
 }
 .parsing__app-img-container {
@@ -356,6 +356,57 @@
     width: 841px;
 
     background: url("../../css/task/diff_management.png") no-repeat;
+}
+
+/*cattools*/
+.cattools__img {
+    align-self: center;
+    height: 98px;
+    width: 72px;
+    background: url("../../css/task/cattools.png") no-repeat;
+    margin-bottom: 19px;
+}
+.cattools__title {
+    color: #333333;
+    font-family: "Source Sans Pro";
+    font-size: 32px;
+    letter-spacing: -0.2px;
+    line-height: 40px;
+    text-align: center;
+
+    margin-bottom: 26px;
+}
+.cattools__description {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    max-width: 550px;
+    color: #333333;
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 27px;
+    text-align: left;
+    margin-bottom: 54px;
+}
+.cattools__app-img-container {
+    align-self: center;
+    box-sizing: border-box;
+    height: 541px;
+    /*width: 891px;*/
+    border: 1px solid rgba(151,151,151,0.27);
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    box-shadow: 0 54px 24px -39px #0A0F2D;
+
+    padding: 31px 24px 39px 26px;
+}
+.cattools__app-img {
+    height: 471px;
+    width: 841px;
+
+    background: url("../../css/task/glossary_tm.png") no-repeat;
 }
 
 /*teamwork*/
@@ -483,9 +534,11 @@
     background-size: 94px 94px !important;
 }
 
-.google_img {background: url("../../css/imgs/goggle.png") no-repeat;}
-.vue_img {background: url("../../css/imgs/rurust.png") no-repeat;}
-.nuxt_img {background: url("../../css/imgs/tensorflow.png") no-repeat;}
+.google_img {background: url("../../css/imgs/google.png") no-repeat;}
+.vue_img {background: url("../../css/imgs/vue.png") no-repeat;}
+.nuxt_img {background: url("../../css/imgs/nuxt.png") no-repeat;}
+.qiskit_img {background: url("../../css/imgs/qiskit.png") no-repeat;}
+.tensorflow_img {background: url("../../css/imgs/tensorflow.png") no-repeat;}
 
 .project__title {
     color: #333333;
