@@ -55,11 +55,14 @@
     .teamwork__app-img-container {
         display: none;
     }
+    .cattools__app-img-container {
+        display: none;
+    }
     .main__description, .features__description {
         width: auto;
     }
 
-    .teamwork:after {
+    .teamwork:after, .cattools:after {
         top: 0;
         bottom: 0;
     }
@@ -159,4 +162,3 @@
         flex-basis: 20%;
     }
 }
-
