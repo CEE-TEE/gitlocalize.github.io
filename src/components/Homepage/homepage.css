@@ -48,16 +48,9 @@
     align-self: flex-start;
 }
 
-.logo {
-    height: 28px;
-    min-width: 175px;
-    background: url("../../css/task/logo.png") no-repeat;
-    margin: 19px 55px 17px 0;
-}
-
-.link {
+.logo-link {
     display: flex;
-    height: 100%;
+    margin: 19px 55px 17px 0;
 }
 
 .navigation {

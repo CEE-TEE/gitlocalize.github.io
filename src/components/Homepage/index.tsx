@@ -7,6 +7,10 @@ import Button from "@site/src/shared/Button";
 import Select from "@site/src/shared/Select";
 import SelectItem from "@site/src/shared/Select/SelectItem";
 import {AuthorizationContext} from "@site/src/contexts/Authorization";
+// @ts-ignore
+import logo from "@site/static/img/logo.png";
+// @ts-ignore
+import main from "@site/static/img/main.png";
 
 function UserPanel({user}): JSX.Element {
     const {userName, avatar} = user || {};
@@ -37,9 +41,10 @@ export default function Homepage(): JSX.Element {
                 <div className="homepage__container--adaptive">
                     <div className="homepage__flex">
                         <div className="navigation__container">
-                            <div className="logo">
-                                <a className="link" href="/"/>
-                            </div>
+                            <a className="logo-link" href="/">
+                                <img src={logo} alt="logo" width="198" height="32"/>
+                            </a>
+
                             <nav className="navigation">
                                 <a className="link navigation__link" href="#features">Features</a>
                                 <a className="link navigation__link" href="#projects">Projects</a>
@@ -67,7 +72,7 @@ export default function Homepage(): JSX.Element {
                         </div>
                     </div>
                     <div className="homepage__flex main__app-img-container flex-l-4 flex-m-5">
-                        <div className="main__app-img"/>
+                        <img src={main} alt="main" width="400" height="323"/>
                     </div>
                 </div>
             </div>
