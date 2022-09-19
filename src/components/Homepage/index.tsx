@@ -71,7 +71,7 @@ export default function Homepage(): JSX.Element {
                             <Button className="demo-button" href="#demo">Watch Demo</Button>
                         </div>
                     </div>
-                    <div className="homepage__flex main__app-img-container flex-l-4 flex-m-5">
+                    <div className="homepage__flex main__app-img-container flex-l-4 flex-m-5 flex-s-10">
                         <img src={main} alt="main" width="400" height="323"/>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ export default function Homepage(): JSX.Element {
 
             <div className="homepage__container repository" id="repository">
                 <div className="homepage__container--adaptive">
-                    <div className="homepage__flex flex-l-5 flex-m-6">
+                    <div className="homepage__flex flex-l-5 flex-m-6 flex-s-10">
                         <div className="repository__img-container">
                             <div className="repository__img"/>
                         </div>
@@ -123,7 +123,7 @@ export default function Homepage(): JSX.Element {
 
             <div className="homepage__container teamwork" id="teamwork">
                 <div className="homepage__container--adaptive">
-                    <div className="homepage__flex flex-l-5 flex-m-6">
+                    <div className="homepage__flex flex-l-5 flex-m-6 flex-s-10">
                         <div className="teamwork__app-img-container">
                             <div className="teamwork__app-img"/>
                         </div>
@@ -229,7 +229,7 @@ export default function Homepage(): JSX.Element {
 
             <div className="homepage__container advantages" id="advantages">
                 <div className="homepage__container--adaptive">
-                    <div className="homepage__flex flex-l-10 flex-m-10">
+                    <div className="homepage__flex flex-l-10 flex-m-10 flex-s-10">
                         <div className="advantages__title">How It Works</div>
                         <div className="advantages__description">We made this short video to demonstrate how GitLocalize works</div>
                         <iframe className="advantages__video" id="demo" src="https://www.youtube.com/embed/PoSjHoEWV3w" frameBorder="0"
