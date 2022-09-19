@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 .homepage__container {
     display: flex;
@@ -51,6 +51,7 @@
 
 .logo-link {
     display: flex;
+    min-width: 198px;
     margin: 19px 55px 17px 0;
 }
 
@@ -88,6 +89,7 @@
 
 .user {
     width: 40px;
+    min-width: 40px;
     height: 40px;
     background-color: #FFFFFF;
     background-size: 40px 40px;
@@ -139,20 +141,14 @@
     margin-bottom: 59px;
     width: 400px;
 }
-.main__app-img {
-    align-self: flex-end;
-    height: 323px;
-    width: 400px;
-    background: url("../../css/task/main.png") no-repeat;
-    background-size: cover;
-    margin-top: 20px;
+.main__app-img-container {
+    min-width: 300px;
 }
+.main__app-img {}
 
 .main__actions {
     display: flex;
-    /*justify-content: center;*/
     flex-wrap: wrap;
-    /*width: 413px;*/
 }
 
 .main__actions .button:nth-child(2) {
@@ -254,8 +250,9 @@
 
 .repository__img-container {
     box-sizing: border-box;
-    height: 606px;
-    width: 555px;
+    min-width: 300px;
+    /*height: 606px;*/
+    /*width: 555px;*/
     border: 1px solid rgba(151,151,151,0.27);
     border-radius: 14px;
     background-color: #FFFFFF;
@@ -263,12 +260,8 @@
     padding: 39px 36px 42px 39px;
 
 }
-.repository__img {
-    height: 530px;
-    width: 480px;
+.repository__img {}
 
-    background: url("../../css/task/add_repository.png") no-repeat;
-}
 .repository__sync {
     padding-top: 35px;
     padding-left: 93px;
@@ -340,7 +333,8 @@
 .parsing__app-img-container {
     align-self: center;
     box-sizing: border-box;
-    height: 541px;
+    min-width: 300px;
+    /*height: 541px;*/
     /*width: 891px;*/
     border: 1px solid rgba(151,151,151,0.27);
     border-radius: 14px;
@@ -349,12 +343,7 @@
 
     padding: 31px 24px 39px 26px;
 }
-.parsing__app-img {
-    height: 471px;
-    width: 841px;
-
-    background: url("../../css/task/diff_management.png") no-repeat;
-}
+.parsing__app-img {}
 
 /*cattools*/
 .cattools .homepage__container--adaptive {
@@ -395,7 +384,8 @@
 .cattools__app-img-container {
     align-self: center;
     box-sizing: border-box;
-    height: 541px;
+    min-width: 300px;
+    /*height: 541px;*/
     /*width: 891px;*/
     border: 1px solid rgba(151,151,151,0.27);
     border-radius: 14px;
@@ -404,12 +394,7 @@
 
     padding: 31px 24px 39px 26px;
 }
-.cattools__app-img {
-    height: 471px;
-    width: 841px;
-
-    background: url("../../css/task/glossary_tm.png") no-repeat;
-}
+.cattools__app-img {}
 
 /*teamwork*/
 .teamwork {
@@ -431,8 +416,9 @@
 
 .teamwork__app-img-container {
     box-sizing: border-box;
-    height: 606px;
-    width: 555px;
+    min-width: 300px;
+    /*height: 606px;*/
+    /*width: 555px;*/
     border: 1px solid rgba(151,151,151,0.27);
     border-radius: 14px;
     background-color: #FFFFFF;
@@ -440,12 +426,7 @@
 
     padding: 27px 53px 26px 54px;
 }
-.teamwork__app-img {
-    height: 553px;
-    width: 448px;
-
-    background: url("../../css/task/pull_request.png") no-repeat;
-}
+.teamwork__app-img {}
 .teamwork__info {
     padding-top: 25px;
     padding-left: 93px;

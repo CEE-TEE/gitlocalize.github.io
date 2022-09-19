@@ -11,6 +11,14 @@ import {AuthorizationContext} from "@site/src/contexts/Authorization";
 import logo from "@site/static/img/logo.png";
 // @ts-ignore
 import main from "@site/static/img/main.png";
+// @ts-ignore
+import add_repository from "@site/static/img/add_repository.png";
+// @ts-ignore
+import diff_management from "@site/static/img/diff_management.png";
+// @ts-ignore
+import pull_request from "@site/static/img/pull_request.png";
+// @ts-ignore
+import glossary_tm from "@site/static/img/glossary_tm.png";
 
 function UserPanel({user}): JSX.Element {
     const {userName, avatar} = user || {};
@@ -72,7 +80,7 @@ export default function Homepage(): JSX.Element {
                         </div>
                     </div>
                     <div className="homepage__flex main__app-img-container flex-l-4 flex-m-5 flex-s-10">
-                        <img src={main} alt="main" width="400" height="323"/>
+                        <img src={main} alt="main"/>
                     </div>
                 </div>
             </div>
@@ -91,7 +99,7 @@ export default function Homepage(): JSX.Element {
                 <div className="homepage__container--adaptive">
                     <div className="homepage__flex flex-l-5 flex-m-6 flex-s-10">
                         <div className="repository__img-container">
-                            <div className="repository__img"/>
+                            <img src={add_repository} alt="repository"/>
                         </div>
                     </div>
                     <div className="repository__sync homepage__flex flex-l-5 flex-m-3">
@@ -115,7 +123,7 @@ export default function Homepage(): JSX.Element {
                         <div className="parsing__description">Easily see what parts of your document have been updated and need to be translated again in the side-by-side editor.
                         <br/><br/>GitLocalize parses your files into translatable segments, making it easier to stay on top of updates and keep translations up-to-date.</div>
                         <div className="parsing__app-img-container">
-                            <div className="parsing__app-img"/>
+                            <img src={diff_management} alt="diff_management"/>
                         </div>
                     </div>
                 </div>
@@ -125,7 +133,7 @@ export default function Homepage(): JSX.Element {
                 <div className="homepage__container--adaptive">
                     <div className="homepage__flex flex-l-5 flex-m-6 flex-s-10">
                         <div className="teamwork__app-img-container">
-                            <div className="teamwork__app-img"/>
+                            <img src={pull_request} alt="pull_request"/>
                         </div>
                     </div>
                     <div className="teamwork__info homepage__flex flex-l-5 flex-m-3">
@@ -145,7 +153,7 @@ export default function Homepage(): JSX.Element {
                         <br/><br/>In dynamically updating projects where a lot of text is reused across multiple documents, Translation Memory helps reduce translation costs and turnarund times.
                         </div>
                         <div className="cattools__app-img-container">
-                            <div className="cattools__app-img"/>
+                            <img src={glossary_tm} alt="glossary_tm"/>
                         </div>
                     </div>
                 </div>
