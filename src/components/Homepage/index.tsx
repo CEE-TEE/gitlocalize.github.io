@@ -47,24 +47,28 @@ export default function Homepage(): JSX.Element {
         <div className="homepage">
             <div className="header__container header">
                 <div className="homepage__container--adaptive">
-                    <div className="homepage__flex">
-                        <div className="navigation__container">
-                            <a className="logo-link" href="/">
-                                <img src={logo} alt="logo" width="198" height="32"/>
-                            </a>
+                    <div className="navigation-container">
+                        <a className="logo-link" href="/">
+                            <img src={logo} alt="logo" width="198" height="32"/>
+                        </a>
 
-                            <nav className="navigation">
+                        <input className="navigation-checkbox" type="checkbox" id="toggle"/>
+                        <label className="navigation-button" htmlFor="toggle"><div/><div/><div/></label>
+
+                        <nav className="navigation">
+                            <div className="navigation-left">
                                 <a className="link navigation__link" href="#features">Features</a>
                                 <a className="link navigation__link" href="#projects">Projects</a>
                                 <a className="link navigation__link" href="https://blog.gitlocalize.com/">Blog</a>
                                 <a className="link navigation__link" href="https://docs.gitlocalize.com/">Docs</a>
-                            </nav>
-                        </div>
-                    </div>
-                    <div className="homepage__flex">
-                        {(authorization.token)
-                            ? (<UserPanel user={authorization.user}/>)
-                            : (<Button className="auth-button" href="https://gitlocalize.com/auth/grant">Sign in with GitHub</Button>)}
+                            </div>
+
+                            <div className="navigation-right">
+                                {(authorization.token)
+                                    ? (<UserPanel user={authorization.user}/>)
+                                    : (<Button className="auth-button" href="https://gitlocalize.com/auth/grant">Sign in with GitHub</Button>)}
+                            </div>
+                        </nav>
                     </div>
                 </div>
             </div>

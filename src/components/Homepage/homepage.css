@@ -42,15 +42,9 @@
     padding-right: 15px;
 }
 
-.navigation__container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    align-self: flex-start;
-}
-
 .logo-link {
     display: flex;
+    align-self: flex-start;
     min-width: 198px;
     margin: 19px 55px 17px 0;
 }
@@ -896,4 +890,86 @@
     background: url("../../css/task/github-white.svg") center no-repeat;
 
     border-right: 1px solid rgba(0,0,0,0.2);
+}
+
+.navigation-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+
+}
+
+.navigation-checkbox {
+    display: none;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    margin: 0;
+}
+
+.navigation {
+    justify-content: space-between;
+    flex: 1;
+}
+.navigation-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.navigation-right {
+    display: flex;
+}
+
+.navigation-checkbox ~ .navigation {
+    /*display:none;*/
+}
+
+.navigation-checkbox:checked ~ .navigation {
+    display: flex;
+}
+
+.navigation-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 280px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 44px;
+    max-width: 44px;
+    height: 34px;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 17px 25px 17px auto;
+
+    user-select: none;
+}
+
+.navigation-button:hover {
+    background-color: #193B70;
+}
+
+.navigation-button div {
+    width: 20px;
+    height: 2px;
+    background-color: #FFFFFF;
+    margin: 2px 0;
+}
+
+@media (max-width: 992px){
+    .navigation-container {
+        flex-direction: column;
+    }
+    .navigation-button {
+        display: flex;
+    }
+    .navigation {
+        display:none;
+    }
 }
